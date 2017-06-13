@@ -22,7 +22,7 @@ void dumpblock(int start_offset, char *buf, int bc)
       max = BYTESPERLINE > left ? left : BYTESPERLINE;
       for (i = 0; i < max; i++)
       {
-         printf("%02x ", buf[i + ofs]);
+         printf("%02x ", buf[i + ofs] & 0xff);
       }
       for (i = max; i < BYTESPERLINE; i++)
          printf("   ");
